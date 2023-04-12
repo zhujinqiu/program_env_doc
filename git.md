@@ -2,7 +2,19 @@
 
 git是一个开源分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 
+### or create a new repository on the command line
 
+
+
+```
+echo "# program_env_doc" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin url ## url 仓库网站
+git push -u origin master
+```
 
 ## Git安装
 
@@ -87,7 +99,7 @@ git init
 
 ```bash
 git add . #*.py  表示所有.py结尾的 添加文件到仓库
-git add README
+git add README.md
 git commit -m '初始化项目版本' #  提交暂存区到本地仓库
 
 ```
@@ -144,6 +156,11 @@ origin    git@github.com:mojombo/grit.git (push)
 ```console
 git remote add shortname url
 ```
+
+url有两种形式：
+
+- ssh:         git@github.com:username/repository.git
+- https:      https://github.com/username/repository.git
 
 现在你可以在命令行中使用字符串 `shortname` 来代替整个 URL。 例如，如果你想拉取 Paul 的仓库中有但你没有的信息，可以运行 `git fetch shortname`：
 
